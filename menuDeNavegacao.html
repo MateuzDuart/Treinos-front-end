@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/menuDeNavegacao.CSS">
+    <title>Menu de Navegação</title>
+</head>
+<body>
+    <div class="navegador">
+        <ul>
+            <li class="ativado" style="--i: 0;">
+                <a href="#">
+                    <span class="icone"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="texto">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icone"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="texto">Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icone"><ion-icon name="chatbubbles-outline"></ion-icon></span>
+                    <span class="texto">Mensagem</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icone"><ion-icon name="camera-outline"></ion-icon></span>
+                    <span class="texto">Photos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icone"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="texto">Configuração</span>
+                </a>
+            </li>
+            <div class="indicador"></div>
+        </ul>
+    </div>
+
+    <script>
+        const todosElementos = document.querySelectorAll('.navegador li')
+
+        function ativador() {
+            todosElementos.forEach((e) => {
+                e.classList.remove('ativado')
+                this.classList.add('ativado')
+            })
+
+        }
+        
+        todosElementos.forEach((e) => {
+           e.addEventListener('click', ativador)
+        })
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
